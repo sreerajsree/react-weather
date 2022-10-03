@@ -1,3 +1,3 @@
-# Netflix Clone made with React JS, Tailwind CSS and The Movie Database (TMDB) API
+# Weather App made with React JS & Open Weather Map ApI
 
 ![ScreenShot 1](/Weather1.PNG)
