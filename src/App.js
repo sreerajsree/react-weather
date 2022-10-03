@@ -17,6 +17,11 @@ function App() {
 
   return (
     <div className="app">
+      <div className="banner">
+        Made with <a href="https://reactjs.org/">React JS</a> &{" "}
+        <a href="https://openweathermap.org/api">OpenWeather Map API</a> by{" "}
+        <a href="https://sreerajsree.vercel.app/">Sreeraj S</a>
+      </div>
       <div className="container">
         <div className="search">
           <input
@@ -36,13 +41,17 @@ function App() {
           </div>
           <div className="description">
             {data.weather ? <p>{data.weather[0].main}</p> : null}
-            {data.weather ? <span className="text-sm">{data.weather[0].description}</span> : null}
+            {data.weather ? (
+              <span className="text-sm">{data.weather[0].description}</span>
+            ) : null}
           </div>
         </div>
         {data.name !== undefined && (
           <div className="bottom">
             <div className="feels">
-              {data.main ? <p className="bold">{data.main.feels_like.toFixed()}°F</p> : null}
+              {data.main ? (
+                <p className="bold">{data.main.feels_like.toFixed()}°F</p>
+              ) : null}
               <p>Feels Like</p>
             </div>
             <div className="humidity">
