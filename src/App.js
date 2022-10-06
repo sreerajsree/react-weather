@@ -15,6 +15,9 @@ function App() {
     }
   };
 
+  const Temp = (data.main.temp - 32)*5/9;
+  const Fl = (data.main.feels_like - 32)*5/9;
+
   return (
     <div className="app">
       <div className="banner">
@@ -37,7 +40,7 @@ function App() {
             <p>{data.name}</p>
           </div>
           <div className="temp">
-            {data.main ? <h1>{data.main.temp.toFixed()}°F</h1> : null}
+            {data.main ? <h1>{Temp.toFixed()}°C</h1> : null}
           </div>
           <div className="description">
             {data.weather ? <p>{data.weather[0].main}</p> : null}
@@ -50,7 +53,7 @@ function App() {
           <div className="bottom">
             <div className="feels">
               {data.main ? (
-                <p className="bold">{data.main.feels_like.toFixed()}°F</p>
+                <p className="bold">{Fl.toFixed()}°C</p>
               ) : null}
               <p>Feels Like</p>
             </div>
