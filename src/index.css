@@ -35,7 +35,7 @@ h1 {
 
 .app {
   width : 100%;
-  height : 100%;
+  height : 100vh;
   position: relative;
   background-color: rgba(0,0,0,0.4);
   color: #fff;
@@ -72,7 +72,6 @@ h1 {
   margin: auto;
   padding: 0 1rem;
   position: relative;
-  top: 10%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -101,3 +100,15 @@ h1 {
 .text-sm {
   font-size: 18px;
 }
+
+@media (max-width: 400px)  { 
+  .container{
+    height: 600px !important;
+  }
+  p{
+    font-size: 18px;
+  }
+  h1{
+    font-size: 4rem;
+  }
+ }
